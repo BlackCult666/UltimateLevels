@@ -3,7 +3,7 @@ package it.blackcult.ultimatelevels;
 import it.blackcult.ultimatelevels.commands.LevelsCommand;
 import it.blackcult.ultimatelevels.commands.ULevelsCommand;
 import it.blackcult.ultimatelevels.listeners.InventoryListener;
-import it.blackcult.ultimatelevels.listeners.PlayerListener;
+import it.blackcult.ultimatelevels.listeners.ConnectionListener;
 import it.blackcult.ultimatelevels.utils.CurrencyManager;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.RegisteredServiceProvider;
@@ -29,7 +29,7 @@ public class UltimateLevels extends JavaPlugin {
         getCommand("ultimatelevels").setExecutor(new ULevelsCommand());
 
         getServer().getPluginManager().registerEvents(new InventoryListener(), this);
-        getServer().getPluginManager().registerEvents(new PlayerListener(), this);
+        getServer().getPluginManager().registerEvents(new ConnectionListener(), this);
     }
 
     private boolean setupEconomy() {
