@@ -1,0 +1,12 @@
+name: UltimateLevels
+author: BlackCult
+version: 1.0
+main: it.blackcult.ultimatelevels.UltimateLevels
+softdepend: [Vault]
+api-version: '1.19'
+commands:
+  levels:
+    description: Open the main inventory
+  ultimatelevels:
+    description: Admin commands
+

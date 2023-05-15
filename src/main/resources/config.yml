@@ -1,0 +1,337 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                       Settings                       | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Customize the main settings of the plugin
+# Sounds: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+
+settings:
+  gui-title: "&nLeveling System"
+  use-vault: false # Put this to true if you want to use money instead of EXP.
+  level-up-sound: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  materials:
+    locked-level: "RED_STAINED_GLASS_PANE"
+    locked-reward: "FURNACE_MINECART"
+    unlocked-level: "LIME_STAINED_GLASS_PANE"
+    unlocked-reward: "MINECART"
+    decorative-block: "GRAY_STAINED_GLASS_PANE"
+
+############################################################
+# +------------------------------------------------------+ #
+# |                       Messages                       | #
+# +------------------------------------------------------+ #
+############################################################
+
+no-permission: "&cYou have no access to this command."
+reload-message: "&aYou have correctly reloaded config file."
+help-message:
+  - ""
+  - "&eUltimateLevels &7(1.0)"
+  - ""
+  - "&a/levels &7- &fOpen the levels menu"
+  - "&a/ultimatelevels reload &7- &fReload config"
+  - "&a/ultimatelevels set &7- &fChange a player's level"
+  - "&a/ultimatelevels help &7- &fShow this message"
+  - ""
+  - "&7Plugin developed by &fBlackCult666"
+set-level-usage: "&cCorrect usage: /ultimatelevels set <player> <level>"
+player-not-found: "&cPlayer %player% not found."
+invalid-level: "&cYou can only choose a number from 0 and %maxlevel%."
+changed-level: "&aYou have correctly changed &f%player%&a's level to: &2%level%"
+
+############################################################
+# +------------------------------------------------------+ #
+# |                     Menu Buttons                     | #
+# +------------------------------------------------------+ #
+############################################################
+
+# This is the progress bar you see with "%progressbar%" placeholder.
+progress-bar:
+  symbol: "|"
+  completed-color: "&a" # Left part of the bar.
+  uncompleted-color: "&c" # Right part of the bar.
+
+decorative-block:
+  name: "&7" # Put "" if you want the default item name.
+# lore:
+# - ""
+
+# The navigation arrow to go back.
+back-button:
+  name: "&4<- Previous Page"
+  lore:
+    - "&7View previous page"
+
+# The navigation arrow to go next.
+next-button:
+  name: "&2Next Page ->"
+  lore:
+    - "&7View next page"
+
+# The top skull item containing player's information.
+stats-item:
+  name: "&6%player%"
+  maxed-string: "Maxed" # The text that appears when you reach the last level
+  lore:
+    - "&8Your Statistics"
+    - ""
+    - "&aInformation:"
+    - "&8- &7Actual Level: &a%level%"
+    - "&8- &7Next Level: &6%nextlevel%"
+
+############################################################
+# +------------------------------------------------------+ #
+# |                       Levels                         | #
+# +------------------------------------------------------+ #
+############################################################
+
+#
+# Available placeholders:
+# %player%, %level%, %progressbar%, %percentage%, %price%
+#
+
+levels:
+  1:
+    price: 500 # You can decide whether to use money or exp (settings -> use-vault: true)
+    rewards:
+      enabled: true # If you disable this, the player will get no rewards and there won't be the minecart.
+      name: "&6Reward #%level%"
+      lore:
+        - ""
+        - "&7What you will get:"
+        - "&a- 5x Diamonds"
+      prizes:
+        - "broadcast %player% has reached level %level%"
+        - "give %player% diamond 5"
+    level:
+      locked-name: "&cLevel %level% &l[LOCKED]" # Item name when the level is locked.
+      unlocked-name: "&aLevel %level% &l[UNLOCKED]" # Item name when you have already unlocked the level.
+      lore:
+      - ""
+      - "&7Progress:"
+      - "%progressbar% &a%percentage%"
+      - ""
+      - "&7Level Price:"
+      - "&6%price%"
+  2:
+    price: 2000
+    rewards:
+      enabled: true
+      name: "&6Reward #%level%"
+      lore:
+        - ""
+        - "&7What you will get:"
+        - "&a- 5x Diamonds"
+      prizes:
+        - "broadcast %player% has reached level %level%"
+        - "give %player% diamond 5"
+    level:
+      locked-name: "&cLevel %level% &l[LOCKED]"
+      unlocked-name: "&aLevel %level% &l[UNLOCKED]"
+      lore:
+        - ""
+        - "&7Progress:"
+        - "%progressbar% &a%percentage%"
+        - ""
+        - "&7Level Price:"
+        - "&6%price%"
+  3:
+    price: 5000
+    rewards:
+      enabled: false
+      name: "&6Reward #%level%"
+      lore:
+        - ""
+        - "&7What you will get:"
+        - "&a- 5x Diamonds"
+      prizes:
+        - "broadcast %player% has reached level %level%"
+        - "give %player% diamond 5"
+    level:
+      locked-name: "&cLevel %level% &l[LOCKED]"
+      unlocked-name: "&aLevel %level% &l[UNLOCKED]"
+      lore:
+        - ""
+        - "&7Progress:"
+        - "%progressbar% &a%percentage%"
+        - ""
+        - "&7Level Price:"
+        - "&6%price%"
+  4:
+    price: 10000
+    rewards:
+      enabled: true
+      name: "&6Reward #%level%"
+      lore:
+        - ""
+        - "&7What you will get:"
+        - "&a- 5x Diamonds"
+      prizes:
+        - "broadcast %player% has reached level %level%"
+        - "give %player% diamond 5"
+    level:
+      locked-name: "&cLevel %level% &l[LOCKED]"
+      unlocked-name: "&aLevel %level% &l[UNLOCKED]"
+      lore:
+        - ""
+        - "&7Progress:"
+        - "%progressbar% &a%percentage%"
+        - ""
+        - "&7Level Price:"
+        - "&6%price%"
+  5:
+    price: 15000
+    rewards:
+      enabled: true
+      name: "&6Reward #%level%"
+      lore:
+        - ""
+        - "&7What you will get:"
+        - "&a- 5x Diamonds"
+      prizes:
+        - "broadcast %player% has reached level %level%"
+        - "give %player% diamond 5"
+    level:
+      locked-name: "&cLevel %level% &l[LOCKED]"
+      unlocked-name: "&aLevel %level% &l[UNLOCKED]"
+      lore:
+        - ""
+        - "&7Progress:"
+        - "%progressbar% &a%percentage%"
+        - ""
+        - "&7Level Price:"
+        - "&6%price%"
+  6:
+    price: 20000
+    rewards:
+      enabled: true
+      name: "&6Reward #%level%"
+      lore:
+        - ""
+        - "&7What you will get:"
+        - "&a- 5x Diamonds"
+      prizes:
+        - "broadcast %player% has reached level %level%"
+        - "give %player% diamond 5"
+    level:
+      locked-name: "&cLevel %level% &l[LOCKED]"
+      unlocked-name: "&aLevel %level% &l[UNLOCKED]"
+      lore:
+        - ""
+        - "&7Progress:"
+        - "%progressbar% &a%percentage%"
+        - ""
+        - "&7Level Price:"
+        - "&6%price%"
+  7:
+    price: 25000
+    rewards:
+      enabled: false
+      name: "&6Reward #%level%"
+      lore:
+        - ""
+        - "&7What you will get:"
+        - "&a- 5x Diamonds"
+      prizes:
+        - "broadcast %player% has reached level %level%"
+        - "give %player% diamond 5"
+    level:
+      locked-name: "&cLevel %level% &l[LOCKED]"
+      unlocked-name: "&aLevel %level% &l[UNLOCKED]"
+      lore:
+        - ""
+        - "&7Progress:"
+        - "%progressbar% &a%percentage%"
+        - ""
+        - "&7Level Price:"
+        - "&6%price%"
+  8:
+    price: 30000
+    rewards:
+      enabled: true
+      name: "&6Reward #%level%"
+      lore:
+        - ""
+        - "&7What you will get:"
+        - "&a- 5x Diamonds"
+      prizes:
+        - "broadcast %player% has reached level %level%"
+        - "give %player% diamond 5"
+    level:
+      locked-name: "&cLevel %level% &l[LOCKED]"
+      unlocked-name: "&aLevel %level% &l[UNLOCKED]"
+      lore:
+        - ""
+        - "&7Progress:"
+        - "%progressbar% &a%percentage%"
+        - ""
+        - "&7Level Price:"
+        - "&6%price%"
+  9:
+    price: 35000
+    rewards:
+      enabled: true
+      name: "&6Reward #%level%"
+      lore:
+        - ""
+        - "&7What you will get:"
+        - "&a- 5x Diamonds"
+      prizes:
+        - "broadcast %player% has reached level %level%"
+        - "give %player% diamond 5"
+    level:
+      locked-name: "&cLevel %level% &l[LOCKED]"
+      unlocked-name: "&aLevel %level% &l[UNLOCKED]"
+      lore:
+        - ""
+        - "&7Progress:"
+        - "%progressbar% &a%percentage%"
+        - ""
+        - "&7Level Price:"
+        - "&6%price%"
+  10:
+    price: 40000
+    rewards:
+      enabled: true
+      name: "&6Reward #%level%"
+      lore:
+        - ""
+        - "&7What you will get:"
+        - "&a- 5x Diamonds"
+      prizes:
+        - "broadcast %player% has reached level %level%"
+        - "give %player% diamond 5"
+    level:
+      locked-name: "&cLevel %level% &l[LOCKED]"
+      unlocked-name: "&aLevel %level% &l[UNLOCKED]"
+      lore:
+        - ""
+        - "&7Progress:"
+        - "%progressbar% &a%percentage%"
+        - ""
+        - "&7Level Price:"
+        - "&6%price%"
+  11:
+    price: 45000
+    rewards:
+      enabled: true
+      name: "&6Reward #%level%"
+      lore:
+        - ""
+        - "&7What you will get:"
+        - "&a- 5x Diamonds"
+      prizes:
+        - "broadcast %player% has reached level %level%"
+        - "give %player% diamond 5"
+    level:
+      locked-name: "&cLevel %level% &l[LOCKED]"
+      unlocked-name: "&aLevel %level% &l[UNLOCKED]"
+      lore:
+        - ""
+        - "&7Progress:"
+        - "%progressbar% &a%percentage%"
+        - ""
+        - "&7Level Price:"
+        - "&6%price%"
