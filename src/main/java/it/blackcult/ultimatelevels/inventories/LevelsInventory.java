@@ -32,9 +32,6 @@ public class LevelsInventory {
         if(e.getCurrentItem() == null) {
             return;
         }
-        if(!e.getView().getTitle().equals(Methods.format(plugin.getConfig().getString("settings.gui-title")))) {
-            return;
-        }
         e.setCancelled(true);
         if(e.getSlot() == 38) {
             previousPage();
