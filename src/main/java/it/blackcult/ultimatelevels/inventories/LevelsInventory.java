@@ -118,6 +118,7 @@ public class LevelsInventory {
             inv.setItem(i, grayGlass);
         }
     }
+
     public void nextPage() {
         if ((currentPage * itemsPerPage) < Methods.getLevelSize() - 1) {
             currentPage++;

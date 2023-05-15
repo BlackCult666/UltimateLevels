@@ -7,7 +7,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
 public class InventoryListener implements Listener {
-    private UltimateLevels plugin = UltimateLevels.getInstance();
 
     @EventHandler
     public void onClick(InventoryClickEvent e) {
