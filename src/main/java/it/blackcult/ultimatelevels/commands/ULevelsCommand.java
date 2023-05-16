@@ -20,7 +20,7 @@ public class ULevelsCommand implements CommandExecutor {
         if(!(sender instanceof Player player)) {
             return false;
         }
-        if(!player.hasPermission("ultimatelevels.use")) {
+        if(!player.hasPermission("ultimatelevels.admin")) {
             player.sendMessage(Methods.format(plugin.getConfig().getString("no-permission")));
             return false;
         }
@@ -38,7 +38,7 @@ public class ULevelsCommand implements CommandExecutor {
                 player.sendMessage(Methods.format(plugin.getConfig().getString("reload-message")));
                 break;
             case "help":
-                if(!player.hasPermission("ultimatelevels.help")) {
+                if(!player.hasPermission("ultimatelevels.use")) {
                     player.sendMessage(Methods.format(plugin.getConfig().getString("no-permission")));
                     return false;
                 }
