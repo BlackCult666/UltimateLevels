@@ -1,8 +1,8 @@
 name: UltimateLevels
 author: BlackCult
-version: 1.0
+version: 1.0.1
 main: it.blackcult.ultimatelevels.UltimateLevels
-softdepend: [Vault]
+softdepend: [Vault, PlaceholderAPI]
 api-version: '1.19'
 commands:
   levels:

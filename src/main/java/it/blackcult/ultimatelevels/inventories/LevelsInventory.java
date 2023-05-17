@@ -85,7 +85,7 @@ public class LevelsInventory {
                 }
             }
         }
-        ItemStack skull = Methods.getCustomHead(player, plugin.getConfig().getString("stats-item.name").replaceAll("%player%", player.getName()).replaceAll("%level%", String.valueOf(playerLevel)).replaceAll("%nextlevel%", getNextLevel(playerLevel)), plugin.getConfig().getStringList("stats-item.lore").stream().map(s -> s.replace("%player%", player.getName()).replace("%level%", String.valueOf(playerLevel)).replace("%nextlevel%", getNextLevel(playerLevel))).collect(Collectors.toList()));
+        ItemStack skull = Methods.getCustomHead(player, plugin.getConfig().getString("stats-item.name").replaceAll("%player%", player.getName()).replaceAll("%level%", String.valueOf(playerLevel)).replaceAll("%nextlevel%", PlayerData.getNextLevel(player)), plugin.getConfig().getStringList("stats-item.lore").stream().map(s -> s.replace("%player%", player.getName()).replace("%level%", String.valueOf(playerLevel)).replace("%nextlevel%", PlayerData.getNextLevel(player))).collect(Collectors.toList()));
         inv.setItem(4, skull);
 
         inv.setItem(38, Methods.getTippedArrow(PotionType.INSTANT_HEAL, plugin.getConfig().getString("back-button.name"), plugin.getConfig().getStringList("back-button.lore")));
@@ -146,13 +146,6 @@ public class LevelsInventory {
             progressBar = Methods.getProgressBar(plugin.getConfig().getString("progress-bar.symbol"), playerCurrency, neededCurrency, 25, plugin.getConfig().getString("progress-bar.completed-color"), plugin.getConfig().getString("progress-bar.uncompleted-color"));
         }
         return progressBar;
-    }
-
-    private String getNextLevel(int actualLevel) {
-        if(actualLevel == Methods.getLevelSize() - 1) {
-            return plugin.getConfig().getString("stats-item.maxed-string");
-        }
-        return String.valueOf(actualLevel + 1);
     }
 
 }

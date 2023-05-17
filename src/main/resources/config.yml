@@ -7,6 +7,10 @@
 # Customize the main settings of the plugin
 # Sounds: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
 
+disabled-worlds: # List of worlds in which the command is disabled.
+  - "worldName"
+  - "secondWorld"
+
 settings:
   gui-title: "&nLeveling System"
   use-vault: false # Put this to true if you want to use money instead of EXP.
@@ -24,7 +28,8 @@ settings:
 # +------------------------------------------------------+ #
 ############################################################
 
-no-permission: "&cYou have no access to this command."
+no-permission: "&c&nYou have no access to this command."
+command-disabled: "&c&nThis command has been disabled in this world."
 reload-message: "&aYou have correctly reloaded config file."
 help-message:
   - ""
