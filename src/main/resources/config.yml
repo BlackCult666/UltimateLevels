@@ -114,12 +114,12 @@ levels:
       locked-name: "&cLevel %level% &l[LOCKED]" # Item name when the level is locked.
       unlocked-name: "&aLevel %level% &l[UNLOCKED]" # Item name when you have already unlocked the level.
       lore:
-      - ""
-      - "&7Progress:"
-      - "%progressbar% &a%percentage%"
-      - ""
-      - "&7Level Price:"
-      - "&6%price%"
+        - ""
+        - "&7Progress:"
+        - "%progressbar% &a%percentage%"
+        - ""
+        - "&7Level Price:"
+        - "&6%price%"
   2:
     price: 2000
     rewards:

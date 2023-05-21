@@ -30,13 +30,12 @@ public class UltimateLevels extends JavaPlugin {
             saveConfig();
         }
 
-        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") == null) {
-            getLogger().info("PlaceholderAPI plugin not found.");
+        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
+            new LevelsExpansion().register();
         }
         registerCommands();
         registerListeners();
 
-        new LevelsExpansion().register();
     }
 
     private boolean setupEconomy() {
